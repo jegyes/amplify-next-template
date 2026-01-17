@@ -42,7 +42,8 @@ export default function App() {
 
   return (
     <main>
-      <h1>My todos</h1>
+      <h1>SCWR Fall'25; Course-Week 9, Lab 8 - next.js/amplify; jegyes</h1>
+      <h2>My To-Dos</h2>
       <button onClick={createTodo}>+ new</button>
       <ul>
         {todos.map(todo => <li 
