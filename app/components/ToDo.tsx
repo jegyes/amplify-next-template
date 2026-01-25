@@ -40,7 +40,7 @@ export default function App() {
   }
 
   return (
-    <main>
+    <>
       <h1>SCWR Fall'25, Wk10/Lab9, jegyes</h1>
       <h2>My To-Dos</h2>
       <button onClick={createTodo}>+ new</button>
@@ -62,6 +62,8 @@ export default function App() {
       </div>
 
       {/* <button onClick={signOut}>Sign out</button> */}
-    </main>
+    </>
   );
 }
+
+
