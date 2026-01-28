@@ -8,8 +8,8 @@ export default async function LocationFinderServer() {
 
     return (
         <>
-          <h1>Hello from {locationInfo ?? 'N/A'} - SERVER VERSION server component</h1>
-            <h2>Lat: {locationInfo.Latitude ?? 'N/A'}; Lon: {locationInfo.Longitude  ?? 'N/A'}</h2>
+          <h1>Hello from {locationInfo?.City} - SERVER VERSION server component</h1>
+            <h2>Lat: {locationInfo?.Latitude}; Lon: {locationInfo?.Longitude}</h2>
         </>
 
     )
