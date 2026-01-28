@@ -9,6 +9,7 @@ export default async function LocationFinderServer() {
     return (
         <>
           <h1>Hello from {locationInfo?.City} - server component</h1>
+            <h2>Lat: {locationInfo?.Latitude}; Lon: {locationInfo?.Longitude}</h2>
         </>
 
     )
