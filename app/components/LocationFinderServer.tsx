@@ -6,10 +6,10 @@ export default async function LocationFinderServer() {
         const locationInfo =locationData;
 
 
+
     return (
         <>
-          <h1>Hello from {locationInfo?.City} - This is my server component</h1>
-            {/* <h2>Lat: {locationInfo?.Latitude}; Lon: {locationInfo?.Longitude}</h2> */}
+          <h1>Hello from your back end in {locationInfo?.City}!</h1>
         </>
 
     )
