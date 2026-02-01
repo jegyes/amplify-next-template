@@ -1,3 +1,5 @@
+import type { LocationInfo } from "@/app/types/location";
+
 export default async function LocationFinderServer() {
 
         const response = await fetch('https://apip.cc/json');
@@ -10,6 +12,11 @@ export default async function LocationFinderServer() {
     return (
         <>
           <h1>Hello from your back end in {locationInfo?.City}!</h1>
+            <h2>
+                Lat: {locationInfo?.Latitude}; Lon: {locationInfo?.Longitude}
+            </h2>
+          
+          
         </>
 
     )
