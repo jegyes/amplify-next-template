@@ -25,15 +25,19 @@ export default function LocationFinderClient() {
     const lat = locationInfo.Latitude != null ? Number(locationInfo.Latitude) : undefined;
     const lon = locationInfo.Longitude != null ? Number(locationInfo.Longitude) : undefined;
 
+   const latNum = Number(locationInfo?.Latitude);
+   const lonNum = Number(locationInfo?.Longitude);
+
+   const hasCoords = Number.isFinite(latNum) && Number.isFinite(lonNum);
+ 
+
 
 
     return (
     <>
         <h1>Hello from your front end in {locationInfo?.City}!</h1>
         <h2>
-            {Number.isFinite(lat) && Number.isFinite(lon) && (
-            <TempTrackerClient lat={lat} lon={lon} />
-            )}   
+            {hasCoords && <TempTrackerClient lat={latNum} lon={lonNum} />}   
         </h2>
     </>
     );   
