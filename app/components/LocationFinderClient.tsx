@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import TempTrackerClient from "./TempTrackerClient";
 
 export default function LocationFinderClient() {
-    const [locationInfo, setLocationInfo] = useState<LocationInfo>({[]]})
+    const [locationInfo, setLocationInfo] = useState<LocationInfo>({})
     // const [locationInfo, setLocationInfo] = useState({})
     const getLocationInfo = async () => {
         const response = await fetch('https://apip.cc/json');
@@ -20,7 +20,7 @@ export default function LocationFinderClient() {
 
     useEffect(() => { 
         getLocationInfo();
-    }, []);
+    });
 
     const lat = locationInfo.Latitude != null ? Number(locationInfo.Latitude) : undefined;
     const lon = locationInfo.Longitude != null ? Number(locationInfo.Longitude) : undefined;
