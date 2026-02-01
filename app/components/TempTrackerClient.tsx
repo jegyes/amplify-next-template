@@ -1,6 +1,8 @@
 'use client';
 
-export default function TempTrackerClient({ lat, lon }) {
+type TempTrackerProps = { lat: number; lon: number };
+
+export default function TempTrackerClient({ lat, lon }: TempTrackerProps) {
   return (
     <div>
       <p>Lat: {lat}</p>
