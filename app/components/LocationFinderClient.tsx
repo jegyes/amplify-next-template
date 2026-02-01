@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react"
+import TempTrackerClient from "./TempTrackerClient";
 
 export default function LocationFinderClient() {
     const [locationInfo, setLocationInfo] = useState({City: 'N/A'})
@@ -21,12 +22,17 @@ export default function LocationFinderClient() {
         getLocationInfo();
     }, []);
 
+    const lat = locationInfo?.Latitude;
+    const lon = locationInfo?.Longitude;
+
 
     return (
-        <>
-          <h1>Hello from your front end in {locationInfo?.City}!</h1>
-        </>
-    );
-
-   
+    <>
+        <h1>Hello from your front end in {locationInfo?.City}!</h1>
+        <h2>{lat && lon && (
+            <TempTrackerClient lat={lat} lon={lon} />
+        )}   
+        </h2>
+    </>
+    );   
 }
