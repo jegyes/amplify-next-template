@@ -25,9 +25,6 @@ export default function LocationFinderClient() {
    const lonNum = Number(locationInfo?.Longitude);
 
    const hasCoords = Number.isFinite(latNum) && Number.isFinite(lonNum);
- 
-
-
 
     return (
     <>
