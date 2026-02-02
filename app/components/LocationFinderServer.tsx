@@ -13,11 +13,12 @@ export default async function LocationFinderServer() {
     <>
       <h1>Hello from your back end in {locationInfo?.City ?? "N/A"}!</h1>
       <h2>
-        Lat: {hasCoords ? latNum : "N/A"}; Lon: {hasCoords ? lonNum : "N/A"}
+        {/* Lat: {hasCoords ? latNum : "N/A"}; Lon: {hasCoords ? lonNum : "N/A"} */}
+        {hasCoords && <TempTrackerServer lat={latNum} lon={lonNum} />}
       </h2>
 
       {/* Pass 1: prove the tracker renders */}
-      {hasCoords && <TempTrackerServer lat={latNum} lon={lonNum} />}
+      
     </>
   );
 }
