@@ -41,8 +41,9 @@ export default function App() {
 
   return (
     <>
-      <h1>SCWR Fall'25, Wk10/Lab9, jegyes</h1>
-      <h2>My To-Dos</h2>
+      
+      <h1>My To-Dos</h1>
+      <h2>SCWR Fall'25, Project 4, jegyes</h2>
       <button onClick={createTodo}>+ new</button>
       <ul>
         {todos.map(todo => <li 
