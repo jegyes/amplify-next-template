@@ -8,7 +8,7 @@ export default function LocationFinderClient() {
     const [locationInfo, setLocationInfo] = useState<LocationInfo>({})
     // const [locationInfo, setLocationInfo] = useState({})
     const getLocationInfo = async () => {
-        const response = await fetch("/api/location");
+        const response = await fetch("https://apip.cc/json");
         const locationData = await response.json();
 
         setLocationInfo(locationData as LocationInfo);
