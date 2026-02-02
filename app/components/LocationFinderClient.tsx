@@ -1,4 +1,5 @@
 'use client';
+
 import type { LocationInfo } from "@/app/types/location";
 import { useEffect, useState } from "react"
 import TempTrackerClient from "./TempTrackerClient";
@@ -7,13 +8,8 @@ export default function LocationFinderClient() {
     const [locationInfo, setLocationInfo] = useState<LocationInfo>({})
     // const [locationInfo, setLocationInfo] = useState({})
     const getLocationInfo = async () => {
-        const response = await fetch('https://apip.cc/json');
+        const response = await fetch("/api/location");
         const locationData = await response.json();
-        console.log(locationData);
-        console.log("Latitude value:", locationData.Latitude);
-        console.log("Latitude type:", typeof locationData.Latitude);
-        console.log("Longitude value:", locationData.Longitude);
-        console.log("Longitude type:", typeof locationData.Longitude);
 
         setLocationInfo(locationData as LocationInfo);
     };
