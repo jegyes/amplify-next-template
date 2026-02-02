@@ -44,6 +44,5 @@ export default function TempTrackerClient({ lat, lon }: Props) {
   if (loading) return <p>Client weather: loading…</p>;
   if (error) return <p>Client weather error: {error}</p>;
 
-  return <p>Lat: {lat}; Lon: {lon}, 
-    where the current temperature is {temp2m ?? "N/A"} °C.</p>;
+  return <p>Lat: {lat}; Lon: {lon}.  The current temperature is {temp2m ?? "N/A"} °C.</p>;
 }

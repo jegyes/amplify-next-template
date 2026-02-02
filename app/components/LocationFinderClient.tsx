@@ -31,7 +31,7 @@ export default function LocationFinderClient() {
 
     return (
     <>
-        <h1>Hello from your Client, located in the City of {locationInfo?.City},</h1>
+        <h1>Hello from your Client in {locationInfo?.City}!</h1>
         <h2>
             {hasCoords && <TempTrackerClient lat={latNum} lon={lonNum} />}   
         </h2>

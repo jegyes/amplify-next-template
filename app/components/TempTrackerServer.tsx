@@ -15,7 +15,7 @@ export default async function TempTrackerServer({ lat, lon }: TempTrackerServerP
   const temp2m = data?.dataseries?.[0]?.temp2m ?? null;
   return (
     <div>
-      <p>Lat: {lat}; Lon: {lon}, where the current temperature is { temp2m }°C.</p>
+      <p>Lat: {lat}; Lon: {lon}. The current temperature is {temp2m ?? "N/A"} °C.</p>
     </div>
   );
 }
